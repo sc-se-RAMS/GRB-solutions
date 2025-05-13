@@ -1,4 +1,4 @@
-/* Global styles */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(to right, #83a4d4, #b6fbff);
@@ -8,14 +8,13 @@ body {
     margin: 0;
 }
 
-/* Title styling */
 h1 {
     font-size: 2.5rem;
     color: #2c3e50;
     margin-bottom: 40px;
 }
 
-/* Input styling */
+
 .inputButton {
     padding: 10px 20px;
     font-size: 1rem;
@@ -32,7 +31,6 @@ h1 {
     border-color: #2980b9;
 }
 
-/* Button styling */
 button {
     padding: 10px 25px;
     font-size: 1rem;
@@ -48,7 +46,6 @@ button:hover {
     background-color: #2980b9;
 }
 
-/* Output text styling */
 #echo {
     margin-top: 30px;
     font-size: 1.2rem;
