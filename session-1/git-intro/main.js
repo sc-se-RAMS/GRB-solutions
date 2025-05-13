@@ -1,1 +1,1 @@
-console.log("I'm inside an external file");
+console.log("I'm inside an external file, and this is a gitHub test");
