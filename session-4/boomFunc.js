@@ -27,21 +27,33 @@ const boom = (numbersArray) => {
 
     //if containsSeven is true 
 if (checkForSeven){
-    console.log("BOOM!");
+    return "BOOM!";
 } else {
-    console.log("No booming here!");
+    return "No booming here!";
 }
 }
 
-//example arguments to the function Boom()
-numbersToCheck = [1, 2, 3, 5, 7];
-boom(numbersToCheck);
+// example arguments to the function Boom()
+// numbersToCheck = [1, 2, 3, 5, 7];
+// boom(numbersToCheck);
 
-numbersToCheck = [1, 2, 3, 5, 9];
-boom(numbersToCheck);
+// numbersToCheck = [1, 2, 3, 5, 9];
+// boom(numbersToCheck);
 
-numbersToCheck = [1, 2, 3, 5, 97];
-boom(numbersToCheck);
+// numbersToCheck = [1, 2, 3, 5, 97];
+// boom(numbersToCheck);
 
 
+// arrange
+// let numbersToCheck = [1, 2, 3, 5, 7]; // Example advert number to test​
+let numbersToCheck = [1, 2, 3, 5, 9];
+let expectedResult = "No booming here!";
+//act
+let result = boom(numbersToCheck);
+//assert
+if (result === expectedResult) {
+    console.log('Test passed:' + result);
+} else {
+    console.log(`Test failed. Expected ${expectedResult}, but got ${result}.`);
 
+}

@@ -43,13 +43,25 @@ function temperatureConverter(temperature, value){
     } else {
         console.log("Please enter a value specifying degrees Celsius (°C) or degrees Farenheit(°F)");
         return null;
-
     }
 }
 
 module.exports = { temperatureConverter };
 
-temperatureConverter(100,"C"); //212 F
-temperatureConverter(-25, "F"); //-32 (rounded up)
-temperatureConverter(100,""); //Please enter a value specifying degrees Celsius (°C) or degrees Farenheit(°F)"
+// temperatureConverter(100,"C"); //212 F
+// temperatureConverter(-25, "F"); //-32 (rounded up)
+// temperatureConverter(100,""); //Please enter a value specifying degrees Celsius (°C) or degrees Farenheit(°F)"
+
+// arrange
+let temperature = 100;
+let value = "C"
+let expectedTemperature = {temperature: 212, value: "F"};
+//act
+let result = temperatureConverter(temperature, value);
+//assert
+if (JSON.stringify(result) === JSON.stringify(expectedTemperature)) {
+    console.log('Test passed:' + JSON.stringify(result));
+} else {
+    console.log(`Test failed. Expected ${JSON.stringify(expectedTemperature)}, but got ${JSON.stringify(result)}.`);
+}
 

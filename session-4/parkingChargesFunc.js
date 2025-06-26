@@ -60,9 +60,9 @@ function calculateParkingCharge(timeIn, timeOut){
 }
 
 
-calculateParkingCharge(9,14); //undefined as hours go beyond range
-calculateParkingCharge(1, 4);
-calculateParkingCharge(-1, 4);//where parking cannot be less than 0
+// calculateParkingCharge(9,14); //undefined as hours go beyond range
+// calculateParkingCharge(1, 4);
+// calculateParkingCharge(-1, 4);//where parking cannot be less than 0
 
 
 
@@ -77,3 +77,18 @@ calculateParkingCharge(-1, 4);//where parking cannot be less than 0
 //series of if statements to work out costs
 
 //calculation
+
+
+// arrange
+let timeIn = 9;
+let timeOut = 14;
+let expectedCharge = undefined;
+//act
+let result = calculateParkingCharge(timeIn, timeOut);
+//assert
+if (result === expectedCharge) {
+    console.log('Test passed:' + result);
+} else {
+    console.log(`Test failed. Expected ${expectedCharge}, but got ${result}.`);
+
+}
