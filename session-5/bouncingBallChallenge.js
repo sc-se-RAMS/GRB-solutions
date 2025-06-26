@@ -46,22 +46,28 @@ If all of the above argument criterias are matched, return the outcome of occurr
 // }
 
 
-function countBounces(h, bounce, window) {
-    // Validate input conditions
-    if (h <= 0 || bounce <= 0 || bounce >= 1 || window >= h) {
-        return -1; // Invalid input
-    }
+const isValidBounceInput = (h, bounce, window) => {
+    return h > 0 && bounce > 0 && bounce < 1 && window < h;
+};
 
-    let occurrences = 1; // The mother sees the ball when it first falls
-    h *= bounce; // First bounce
+const calculateBouncesSeen = (h, bounce, window) => {
+    let count = 1; // First fall is always seen
+    h *= bounce;
 
     while (h > window) {
-        occurrences += 2; // Mother sees it once going up and once coming down
-        h *= bounce; // Reduce height due to bounce
+      count += 2; // Seen going up and coming back down
+      h *= bounce;
     }
 
-    return occurrences;
-}
+    return count;
+};
+const countBounces = (h, bounce, window) => {
+    if (!isValidBounceInput(h, bounce, window)) {
+        return -1;
+    }
+    return calculateBouncesSeen(h, bounce, window);
+};
+
 
 // Example test cases
 console.log(countBounces(3.0, 0.66, 1.5)); // Output: 3
